@@ -1,0 +1,244 @@
+/**
+ * @name        Brodies LGS - Black Space Edition
+ * @author      SloopNodge
+ * @version     14.0.0
+ * @description Ultra-dark hardware-accelerated transitions, Poppins typography, INFINITE BLACK SPACE BACKDROP
+ */
+
+/* ── Typography & Architecture Overdrive Imports ── */
+@import url("https://xcruxiex.github.io/themes/themes-cores/neutron.css");
+@import url("https://xcruxiex.github.io/themes/core/badges.css");
+@import url("https://xcruxiex.github.io/themes/core/custom-font.css");
+@import url("https://xcruxiex.github.io/themes/core/hljs.css");
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ═══════════════════════════════════════════════════════════
+   PREMIUM MERGED DATA CONTROL VARIABLES
+═══════════════════════════════════════════════════════════ */
+:root {
+  /* ── Translucence Core Engine Adjustments (Infinite Space Void) ── */
+  --app-bg:             url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?q=80&w=2069&auto=format&fit=crop') !important; 
+  --app-blur:           8px !important; /* Sharpened blur for deep star clarity */
+  --app-margin:         12px !important;
+  --app-radius:         14px !important;
+
+  /* ── Accent Color Array & Black Sky Satin Levels ── */
+  --accent-hue:         280 !important; 
+  --accent-saturation:  100% !important;
+  --accent-lightness:   45% !important;
+  --accent-opacity:     1 !important;
+  --accent-text-color:  #ffffff !important;
+
+  --neon-pink:          #ff007f;
+  --neon-pink-glow:     rgba(255, 0, 127, 0.15);
+  --neon-purple:        #6200ea;
+  --neon-blue:          #00e5ff;
+  --neon-blue-glow:     rgba(0, 229, 255, 0.2);
+  
+  /* Deep Space Obsidian Obsidian Core Matrix */
+  --studio-glass:       rgba(2, 1, 4, 0.88) !important;
+  --glass-edge:         rgba(0, 229, 255, 0.05) !important;
+
+  /* ── Global Typography Mapping ── */
+  --customFont:         'Poppins', sans-serif !important;
+
+  /* ── Message Frame Parameters (Translucence Spec) ── */
+  --message-color:        rgba(0, 0, 0, 0.5) !important;
+  --message-radius:       10px !important;
+  --message-padding-top:  8px !important;
+  --message-padding-side: 10px !important;
+
+  /* ── Textarea Layout Parameters ── */
+  --textarea-color:       5, 2, 10 !important;
+  --textarea-alpha:       0.6 !important;
+  --textarea-alpha-focus: 0.75 !important;
+  --textarea-text-color:  #ffffff !important;
+  --textarea-radius:      14px !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FROSTED GLASS FIX PATHS (FORCES TRANSLUCENCE OVERRIDE)
+═══════════════════════════════════════════════════════════ */
+.theme-dark,
+.layer_c26b13,
+div[class*="chatContent_"], 
+div[class*="container_"][class*="chat_"],
+div[class*="contentRegionScroller_"],
+div[class*="sidebar_"], 
+div[class*="membersWrap_"],
+div[class*="privateChannels_"],
+div[class*="panels_"],
+div[class*="container_"][class*="members_"] {
+  background: var(--studio-glass) !important;
+  backdrop-filter: blur(var(--app-blur)) !important;
+  border: 1px solid var(--glass-edge) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   DEEP BLACK SPACE BACKDROP ENGINE (120FPS ACCELERATED)
+═══════════════════════════════════════════════════════════ */
+@keyframes nextgen-sky-drift {
+  0% { background-position: 50% 50%; transform: scale(1) translate3d(0,0,0); }
+  50% { background-position: 50.3% 49.7%; transform: scale(1.02) translate3d(0,0,0); }
+  100% { background-position: 50% 50%; transform: scale(1) translate3d(0,0,0); }
+}
+
+body, #app-mount {
+  background-color: #010002 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+div[class*="bg_"], #app-mount::before, body::before {
+  background-image: var(--app-bg) !important;
+  background-size: cover !important;
+  animation: nextgen-sky-drift 45s ease-in-out infinite !important;
+  transform-origin: center !important;
+  will-change: transform, background-position;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CLEARVISION-STYLED BLUE & PURPLE GLOWING WATERMARK
+═══════════════════════════════════════════════════════════ */
+@keyframes cv-watermark-flow {
+  0% { background-position: 0% 50%; filter: drop-shadow(0 0 2px var(--neon-blue-glow)); }
+  50% { background-position: 100% 50%; filter: drop-shadow(0 0 5px rgba(98, 0, 234, 0.35)); }
+  100% { background-position: 0% 50%; filter: drop-shadow(0 0 2px var(--neon-blue-glow)); }
+}
+
+[class*="typeWindows_"]::before,
+div[class*="wordmark_"]::before {
+  content: "BRODIES LGS" !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  letter-spacing: 3px !important;
+  position: fixed !important;
+  top: 12px !important;
+  left: 20px !important;
+  right: auto !important;
+  z-index: 99999 !important;
+  visibility: visible !important;
+  display: block !important;
+  background: linear-gradient(90deg, #00e5ff, #0072ff, #6200ea, #a100ff) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: cv-watermark-flow 4s ease infinite !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HIGH-SPEED HOVER INTERACTIVE NAME ENGINE
+═══════════════════════════════════════════════════════════ */
+@keyframes matrix-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+[class*="username_"],
+[class*="nameTag_"],
+[class*="nickname_"],
+[class*="userNick_"],
+span[class*="name_"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: none !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important;
+  will-change: background, filter, -webkit-text-fill-color;
+  transition: transform 0.08s cubic-bezier(0.0, 0.0, 0.2, 1) !important;
+}
+
+[class*="username_"]:hover,
+[class*="nameTag_"]:hover,
+[class*="nickname_"]:hover,
+[class*="userNick_"]:hover,
+[class*="interactive_"]:hover span[class*="name_"],
+span[class*="name_"]:hover {
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-pink), #ff7ac3, var(--neon-purple)) !important;
+  background-size: 300% 300% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: matrix-gradient-shift 1.8s linear infinite !important;
+  filter: drop-shadow(0 0 2px var(--neon-pink-glow)) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESTORED METALLIC HOME EMBLEM SVG
+═══════════════════════════════════════════════════════════ */
+@keyframes premium-logo-pulse {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(0, 229, 255, 0.2)); color: #e6f7ff; transform: scale(1); }
+  50% { filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.45)); color: var(--neon-blue); transform: scale(1.03); }
+}
+
+[class*="homeIcon_"],
+[class*="childWrapper_"] svg,
+div[class*="wrapper_"] [class*="childWrapper_"] > svg {
+  color: #ffffff !important;
+  fill: currentColor !important;
+  visibility: visible !important;
+  display: block !important;
+  animation: premium-logo-pulse 3.5s ease-in-out infinite !important;
+}
+
+div[class*="wrapper_"] [class*="childWrapper_"] {
+  background: linear-gradient(135deg, rgba(0, 114, 255, 0.15), rgba(98, 0, 234, 0.05)) !important;
+  border: 1px solid rgba(0, 229, 255, 0.1) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HIGH-REFRESH LATENCY ELIMINATION PIPELINES
+═══════════════════════════════════════════════════════════ */
+@keyframes kinetic-chat-entry {
+  0% { transform: translate3d(0, 4px, 0); opacity: 0; }
+  100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes fast-item-slide {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(3px, 0, 0); }
+}
+
+*, [class*="interactive_"], [class*="member_"], [class*="channel_"], [class*="button_"] {
+  font-family: 'Poppins', sans-serif !important;
+  transition: all 0.08s cubic-bezier(0.0, 0.0, 0.2, 1) !important;
+  will-change: transform, background;
+}
+
+div[class*="chatContent_"], div[class*="members_"], div[class*="contentRegion_"] {
+  animation: kinetic-chat-entry 0.18s cubic-bezier(0.0, 0.0, 0.2, 1) forwards !important;
+}
+
+[class*="channel_"]:hover [class*="layout_"],
+[class*="member_"]:hover [class*="layout_"],
+[class*="interactive_"]:hover {
+  background: linear-gradient(90deg, rgba(0, 229, 255, 0.04), transparent) !important;
+  animation: fast-item-slide 0.06s cubic-bezier(0.0, 0.0, 0.2, 1) forwards !important;
+  border-left: 2px solid var(--neon-blue) !important;
+}
+
+[class*="badge_"], [class*="numberBadge_"], [class*="unreadPill_"], [class*="newMessagesBar_"] {
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple)) !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 800 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 5px rgba(0, 229, 255, 0.3) !important;
+}
+
+.visual-refresh .theme-dark,
+.visual-refresh.theme-dark {
+  --text-primary: #ffffff !important;
+  --text-secondary: #dcddde !important;
+  --interactive-normal: #b9bbbe !important;
+  --interactive-hover: #dcddde !important;
+  --interactive-active: #ffffff !important;
+}
